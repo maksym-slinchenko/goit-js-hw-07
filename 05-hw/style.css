@@ -1,0 +1,11 @@
+#gallery {
+  display: flex;
+}
+.list-element {
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.list-element img {
+  width: 100%;
+}
