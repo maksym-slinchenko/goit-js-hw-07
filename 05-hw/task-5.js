@@ -4,11 +4,8 @@
 const nameInputEl = document.querySelector('#name-input');
 const nameOutputEl = document.querySelector('#name-output');
 const changeName = () => {
-  nameInputEl.value != ''
+  nameInputEl.value !== ''
     ? (nameOutputEl.innerText = nameInputEl.value)
     : (nameOutputEl.innerText = 'незнакомец');
 };
-const onNameInputElInput = addEventListener(
-  'input',
-  changeName,
-);
+const onNameInputElInput = addEventListener('input', changeName);

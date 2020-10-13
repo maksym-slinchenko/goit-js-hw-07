@@ -18,6 +18,16 @@ const inputAmountEl = document.querySelector('#controls input');
 const buttonRenderEl = document.querySelector('[data-action="render"]');
 const buttonDestroyEl = document.querySelector('[data-action="destroy"]');
 const boxesEl = document.querySelector('#boxes');
+const getRandomBackgroundColor = object => {
+  object.style.backgroundColor =
+    'rgb(' +
+    Math.floor(Math.random() * 256) +
+    ',' +
+    Math.floor(Math.random() * 256) +
+    ',' +
+    Math.floor(Math.random() * 256) +
+    ')';
+};
 
 const createBoxes = amount => {
   amount = inputAmountEl.valueAsNumber;
@@ -26,14 +36,7 @@ const createBoxes = amount => {
     boxEl.id = 'box' + i;
     boxEl.style.width = 30 + 10 * i + 'px';
     boxEl.style.height = 30 + 10 * i + 'px';
-    boxEl.style.backgroundColor =
-      'rgb(' +
-      Math.floor(Math.random() * 256) +
-      ',' +
-      Math.floor(Math.random() * 256) +
-      ',' +
-      Math.floor(Math.random() * 256) +
-      ')';
+    getRandomBackgroundColor(boxEl);
     boxesEl.append(boxEl);
   }
 };
